@@ -1,15 +1,15 @@
 {
   "scripts": {
     "start": "node src/index.js",
-    "dev": "DB_FILE=db.sqlite nodemon src/index.js",
-    "seed": "DB_FILE=db.sqlite node src/database/seed.js",
-    "test": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings --test",
-    "test:1": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/one.test.js",
-    "test:2": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/two.test.js",
-    "test:3": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/three.test.js",
-    "test:4": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/four.test.js",
-    "test:5": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/five.test.js",
-    "test:6": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/six.test.js"
+    "dev": "SET DB_FILE=db.sqlite & nodemon src/index.js",
+    "seed": "SET DB_FILE=db.sqlite & node src/database/seed.js",
+    "test": "SET DB_FILE=test.sqlite & node ./src/database/seed.js --no-warnings --test",
+    "test:1": "SET DB_FILE=test.sqlite & node ./src/database/seed.js --no-warnings test/one.test.js",
+    "test:2": "SET DB_FILE=test.sqlite & node ./src/database/seed.js --no-warnings test/two.test.js",
+    "test:3": "SET DB_FILE=test.sqlite & node ./src/database/seed.js --no-warnings test/three.test.js",
+    "test:4": "SET DB_FILE=test.sqlite & node ./src/database/seed.js --no-warnings test/four.test.js",
+    "test:5": "SET DB_FILE=test.sqlite & node ./src/database/seed.js --no-warnings test/five.test.js",
+    "test:6": "SET DB_FILE=test.sqlite & node ./src/database/seed.js --no-warnings test/six.test.js"
   },
   "dependencies": {
     "better-sqlite3": "^7.5.3",
@@ -29,5 +29,22 @@
       "es2021": true,
       "node": true
     }
-  }
+  },
+  "name": "fac-database-intro-challenge",
+  "description": "Practice using a SQLite database to power a Node/Express web app.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psydwinder/FAC-Database-Intro-Challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Psydwinder/FAC-Database-Intro-Challenge/issues"
+  },
+  "homepage": "https://github.com/Psydwinder/FAC-Database-Intro-Challenge#readme"
 }
